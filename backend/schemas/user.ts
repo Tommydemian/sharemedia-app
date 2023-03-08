@@ -11,7 +11,6 @@ interface User extends Schema {
   title: 'User';
   type: 'document';
   fields: UserFields[];
-  // Add any additional properties here
 }
 
 export default {

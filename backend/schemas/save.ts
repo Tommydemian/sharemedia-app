@@ -1,21 +1,21 @@
 import { Schema } from '@sanity/types';
 
-interface CommentFields {
+interface SaveFields {
   name: string;
   title: string;
   type: string;
 }
 
-export interface Comment extends Schema {
-  name: 'comment';
-  title: 'Comment';
+interface Save extends Schema {
+  name: 'save';
+  title: 'Save';
   type: 'document';
-  fields: CommentFields[];
+  fields: SaveFields[];
 }
 
 export default {
-  name: 'comment',
-  title: 'Comment', 
+  name: 'save',
+  title: 'Save', 
   type: 'document',
   fields: [
     {
@@ -24,9 +24,9 @@ export default {
       type: 'postedBy'
     },
     {
-      name: 'comment', 
-      title: 'Comment', 
+      name: 'userID', 
+      title: 'UserID', 
       type: 'string'
     } 
   ],
-} as Comment;
+} as Save;
