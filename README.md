@@ -1,1 +1,0 @@
-The BackEnd will hold the Sanity configuration.
