@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, useNavigate } from 'react-router'
+import { Routes, Route } from 'react-router'
 
 import Login from './Components/Login'
 import Home from './Container/Home'

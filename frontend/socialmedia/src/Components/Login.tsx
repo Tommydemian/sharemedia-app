@@ -1,19 +1,11 @@
-import React from 'react';
-import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
 
 import logo from '../assets/sharelifelogo.png';
 import shareVideo from '../assets/share.mp4';
-
-import { Icon } from '@iconify/react';
+import GoogleOAuth from './GoogleAuth';
 
 const Login = () => {
-
-
-  const responseGoogle = () => {
-    console.log('response')
-  }
-
+  const navigate = useNavigate();
 
   return (
     <div className='flex justify-start items-center flex-col h-screen'>
@@ -26,7 +18,7 @@ const Login = () => {
           muted
           autoPlay
           className='w-full h-full object-cover'
-          />
+        />
 
         <div className='absolute flex flex-col justify-center items-center inset-0 bg-blackOverlay'>
           <div className='p-5'>
@@ -34,30 +26,12 @@ const Login = () => {
           </div>
 
           <div className='shadow-2xl'>
-            <GoogleLogin 
-            clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}
-            render={(renderProps) => (
-              <button 
-              type='button'
-              className='bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer ouline-none '
-              onClick={renderProps.onClick}
-              disabled={renderProps.disabled}
-              >
-               <Icon icon="logos:google-icon" className='mr-4' />
-               Sign in with Google 
-              </button>
-            )}
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy="single_host_origin"
-            />
+          <GoogleOAuth />
           </div>
-
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
