@@ -21,3 +21,13 @@ export type Decoded = {
   picture: string
   sub: string
   }
+
+  export type User = {
+    image: string
+    username: string
+    _createdAt:  string
+    _id: string
+    _rev: string
+    _type: string
+    _updatedAt: string
+  }
