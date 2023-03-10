@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 
 import { client } from '../client'; 
 
-import { decoded, sanityDoc } from '../types'
+import { Decoded, SanityDoc } from '../types'
 
 const googleOAuth = () => {
 
@@ -13,7 +13,7 @@ const googleOAuth = () => {
 return (
 <GoogleLogin
 onSuccess={(credentialResponse) => {
-  let decoded: decoded = {
+  let decoded: Decoded = {
     aud: "",
     azp: "",
     email: "",
@@ -36,12 +36,12 @@ onSuccess={(credentialResponse) => {
 
     const { name, picture, aud } = decoded 
 
-    const doc: sanityDoc = {
-      _id: aud, 
+    const doc: SanityDoc = {
+      _id: aud,
       _type: 'user',
-      username: name, 
+      username: name,
       image: picture,
-    }
+    };
 
     client.createIfNotExists(doc)
     .then(() => {

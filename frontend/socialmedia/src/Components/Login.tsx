@@ -1,11 +1,8 @@
-import { useNavigate } from 'react-router-dom';
-
+import GoogleOAuth from './GoogleAuth';
 import logo from '../assets/sharelifelogo.png';
 import shareVideo from '../assets/share.mp4';
-import GoogleOAuth from './GoogleAuth';
 
 const Login = () => {
-  const navigate = useNavigate();
 
   return (
     <div className='flex justify-start items-center flex-col h-screen'>

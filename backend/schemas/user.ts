@@ -4,6 +4,7 @@ interface UserFields {
   name: string;
   title: string;
   type: string;
+  username: string; 
 }
 
 interface User extends Schema {
@@ -29,5 +30,9 @@ export default {
       type: 'string'
     }
   ],
-  // Add any additional properties here
 } as User;
+
+
+
+
+

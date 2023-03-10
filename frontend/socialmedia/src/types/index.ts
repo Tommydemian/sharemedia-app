@@ -1,11 +1,11 @@
-export type sanityDoc = {
+export type SanityDoc = {
   _id: string, // sanity default
   _type: 'user', //sanity required
   username: string, 
   image: string,
 }
   
-export type decoded = {
+export type Decoded = {
   aud: string
   azp: string
   email: string
