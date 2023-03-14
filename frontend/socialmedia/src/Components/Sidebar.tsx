@@ -73,7 +73,8 @@ const Sidebar = ({ user, closeToggle }: SidebarProps) => {
       </div>
       {user && (
         <Link to={`profile/${user._id}`}
-        className='flex my-5 mb-3 gap-2'
+        className='flex my-5 mb-3 gap-2 p-2 items-center bg-white rounded-lg shadow-lg mx-3'
+        onClick={handleCloseSideBar}
         >
           <img src={user.image} alt="user-image" className='w-10 h10 rounded-full' />
           <p>{user.username}</p>
