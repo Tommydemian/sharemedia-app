@@ -1,17 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import { User } from '../types';
+import { User } from "../types";
 
 type PinDetailsProps = {
-  user: User
-}
+  user?: User;
+};
 
+const CreatePin = ({ user }: PinDetailsProps) => {
+  return <div>CreatePin</div>;
+};
 
-
-const CreatePin = ({user}: PinDetailsProps) => {
-  return (
-    <div>CreatePin</div>
-  )
-}
-
-export default CreatePin
+export default CreatePin;
